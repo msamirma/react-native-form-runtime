@@ -1,6 +1,6 @@
 {
   "name": "react-native-form-runtime",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native form runtime",
   "main": "src/index.js",
   "scripts": {
