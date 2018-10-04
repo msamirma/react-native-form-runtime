@@ -1,0 +1,26 @@
+{
+  "name": "react-native-form-runtime",
+  "version": "0.0.1",
+  "description": "React Native form runtime",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "keywords": [
+    "React-native",
+    "native-base",
+    "form-runtime",
+    "ios",
+    "android",
+    "json schema form",
+    "form validation"
+  ],
+  "author": "MSamir",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.3.1",
+    "react-native": "^0.55.4",
+    "expo": "^28.0.0",
+    "native-base": "^2.6.1"
+  }
+}
