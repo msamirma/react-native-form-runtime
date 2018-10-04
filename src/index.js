@@ -12,6 +12,8 @@ import {
   ActionSheet
 } from "native-base";
 
+import FormFields from "./formFields";
+
 var BUTTONS = ["Camera", "Photo Libarary", "Document", "Cancel"];
 
 var CAMERA_INDEX = 0;
