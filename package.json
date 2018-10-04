@@ -15,7 +15,7 @@
     "json schema form",
     "form validation"
   ],
-  "author": "MSamir",
+  "author": "msamirma",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.3.1",
