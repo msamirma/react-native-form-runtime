@@ -2,7 +2,7 @@
 Form runtime is a react container that let you to have dynamic forms based on design json schema.
 
 # Sample output
-<img src="Example.png" width="200" height="400" />
+<img src="https://github.com/msamirma/react-native-form-runtime/blob/master/Example.png" width="200" height="400" />
 # Prerequisites
 You must have installed Expo And Native base in your application.
 
