@@ -55,11 +55,8 @@ export default class FormRuntime extends React.Component {
     const { submit, type } = this.props;
     const { formValues } = this.state;
     // Think of a way to validate
-    if (type === "vendor") {
-      if (!this.validate()) submit(formValues, ACTION);
-    } else if (!this.validate()) {
-      console.log("FROM FORM: " + this.state);
-      submit(formValues, ACTION);
+    if (type === "submit") {
+      submit(formValues, "ACTION");
     }
   }
 
@@ -225,17 +222,6 @@ export default class FormRuntime extends React.Component {
                 $properties={field}
                 key={"field" + index}
                 onChangeText={value => this.handleChange(field.field, value)}
-                onBlur={value => {
-                  this.handleError(field.field, value);
-                }}
-                onEndEditing={value => {
-                  this.handleError(field.field, value);
-                }}
-                error={
-                  this.state.formErrors
-                    ? this.state.formErrors[field.field]
-                    : null
-                }
                 customHandleChange={this.handleChange}
                 value={
                   this.state.formValues
@@ -250,6 +236,7 @@ export default class FormRuntime extends React.Component {
             );
           })}
           {type !== "view" &&
+            type !== "submit" &&
             type !== "vendor" && (
               <View>
                 <Button
@@ -277,10 +264,22 @@ export default class FormRuntime extends React.Component {
               </Button>
             </View>
           )}
+          {type === "submit" && (
+            <View>
+              <Button
+                full
+                onPress={() => {
+                  this.handleSubmit("Submit");
+                }}
+                title="Submit"
+              >
+                <Text>Submit</Text>
+              </Button>
+            </View>
+          )}
         </Form>
       </ScrollView>
     );
   }
 }
 
-// export const FormRuntime = FormContainer;
