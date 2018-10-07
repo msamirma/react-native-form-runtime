@@ -39,7 +39,7 @@ const FormFields = props => {
           <Label>{label}</Label>
           <Input {...props} />
         </Item>
-        props.error ? <Text>{props.error}</Text> : null
+        {!!props.error && <Text>{props.error}</Text>}
       </View>
     );
   } else if (type == "Number") {
@@ -49,7 +49,7 @@ const FormFields = props => {
           <Label>{label}</Label>
           <Input {...props} keyboardType="numeric" maxLength={10} />
         </Item>
-        props.error ? <Text>{props.error}</Text> : null
+        {!!props.error && <Text>{props.error}</Text>}
       </View>
     );
   } else if (type == "Picker") {
@@ -68,7 +68,7 @@ const FormFields = props => {
             return <Picker.Item label={option} value={option} key={option} />;
           })}
         </Picker>
-        props.error ? <Text>{props.error}</Text> : null
+        {!!props.error && <Text>{props.error}</Text>}
       </View>
     );
   } else if (type == "Checkbox") {
